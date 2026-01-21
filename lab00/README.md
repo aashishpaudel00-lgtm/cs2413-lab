@@ -19,7 +19,8 @@ Open `src/main.c` and modify the printed output to include:
 1. Your full name
 2. Your TTU R number (or last 4 digits ONLY)
 3. Your lab section number (if applicable)
-4. A short message: `I can use GitHub for CS2314 labs!`
+4. A short message: `I can use GitHub for CS2413 labs!`
 
 Example output:
+
 
