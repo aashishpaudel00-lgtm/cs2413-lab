@@ -1,19 +1,26 @@
+#include <stdio.h>
+
 int two_sum_sorted(const int* nums, int n, int target, int* out_i, int* out_j) {
-    int left = 0;      
-    int right = n - 1;   
-    while (left < right) {
-        int current_sum = nums[left] + nums[right];
-        if (current_sum == target) {
-            *out_i = left;
-            *out_j = right;
+    if (nums == NULL || out_i == NULL || out_j == NULL || n < 2) {
+        return 0;
+    }
+
+    int i = 0;
+    int j = n - 1;
+
+    while (i < j) {
+        int sum = nums[i] + nums[j];
+
+        if (sum == target) {
+            *out_i = i;
+            *out_j = j;
             return 1;
-        } 
-        else if (current_sum < target) {
-            left++;
-        } 
-        else {
-            right--;
+        } else if (sum < target) {
+            i++;
+        } else {
+            j--;
         }
     }
+
     return 0;
 }
